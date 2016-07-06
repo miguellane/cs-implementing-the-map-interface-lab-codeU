@@ -102,10 +102,7 @@ public class MyLinearMap<K, V> implements Map<K, V> {
 
 	@Override
 	public V get(Object key) {
-		Entry marked = findEntry(key);
-		if(marked == null)
-			return null;
-		return marked.getValue();
+		return findEntry(key).getValue();
 	}
 
 	@Override
